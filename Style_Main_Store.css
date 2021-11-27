@@ -1,0 +1,61 @@
+body {
+  /* text-align: center; */
+}
+
+#main_display {
+  display: flex;
+}
+#h1_my_store {
+  text-align: center;
+  color: blue;
+  /* background-color: brown; */
+}
+
+#item_list {
+  /* text-align: left; */
+  background-color: cornsilk;
+  border-color: black;
+  border-style: solid;
+}
+#ul_item_list {
+  background-color: lightpink;
+}
+
+#cart {
+  background-color: darkkhaki;
+  margin-left: 50px;
+  border-color: black;
+  border-style: solid;
+}
+
+#ul_cart {
+  background-color: lawngreen;
+}
+
+#total {
+  /* display: block; */
+  background-color: darkturquoise;
+  width: 50px;
+  /* position: absolute;
+  left: 50px; */
+  margin-left: 50px;
+  border-color: black;
+  border-style: solid;
+}
+#total_lb {
+  /* background-color: fuchsia; */
+  /* height: 20px; */
+  /* display: block; */
+}
+
+#total_spm {
+  background-color: hotpink;
+  display: block;
+  position: absolute;
+  margin-top: 15px;
+}
+
+#button_add {
+  border-radius: 50%;
+  /* font-style: unset; */
+}
