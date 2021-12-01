@@ -57,10 +57,8 @@ function set_item_list() {
     item.setAttribute("data-item_id", i.item_id);
     item.innerText = `${i.item_name} | ${i.price} $`;
     document.getElementById("div_ul_item_list").append(item);
-    // document.getElementById("div_ul_item_list").innerText;
   }
 }
-// let i0= new Item("Milk","5")
 function set_cart_list() {
   clear_elements_from_div("div_ul_cart");
 
@@ -76,7 +74,6 @@ function set_cart_list() {
       )}, Quantity: ${i.quantity}`;
       document.getElementById("div_ul_cart").append(item);
     }
-    // document.getElementById("div_ul_item_list").innerText;
   }
 }
 
@@ -104,7 +101,7 @@ function calc_total() {
   }
   return total;
 }
-// console.log(calc_total());
+
 function set_total_price() {
   document.getElementById("total_spm").innerHTML = `${calc_total().toFixed(
     2
@@ -155,8 +152,6 @@ function reduce_from_cart_if_double_press(ev) {
 }
 
 function add_to_cart(ev) {
-  // get the target of what was press
-  // debugger;
   let item_id = ev.target.dataset.item_id;
   if (item_id != undefined) {
     item_cart[get_item_index(item_id, item_cart)].quantity++;
@@ -174,7 +169,6 @@ function get_string(str_type) {
   let str = "";
   do {
     str = prompt(`Please enter ${str_type}`);
-    // TODO:
     flag = check_valid_string(str);
   } while (flag == false);
   return str;
@@ -183,7 +177,6 @@ function get_id(str_type) {
   let id = "";
   do {
     id = prompt(`Please enter ${str_type}`);
-    // TODO:
     flag = check_valid_id(id);
   } while (flag == false);
   return id;
@@ -192,7 +185,6 @@ function get_number(str_type) {
   let num = "";
   do {
     num = prompt(`Please enter ${str_type}`);
-    // TODO:
     flag = check_valid_number(num);
   } while (flag == false);
   return num;
@@ -229,8 +221,10 @@ function check_valid_id(id) {
     if (id == "" || id == null || id == undefined) throw "empty";
     if (id == null || id == undefined) throw "you press cancel";
     if (isNaN(id)) throw "contains a char";
+
     // for Persom ID
     // if (String(id).length != 9) throw "doesn't contain 9 digits";
+
     // for catalog not more than 9 digit:
     if (String(id).length > 9) throw "contain more than 9 digits";
   } catch (err) {
@@ -261,6 +255,7 @@ function check_valid_number(str) {
     if (str == null) throw "you pressed cancel";
     if (str == "") throw "empty";
     if (isNaN(str)) throw "not a number";
+
     // if need to check if integer
     // if (!Number.isInteger(str)) throw "not a integer";
   } catch (err) {
