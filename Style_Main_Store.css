@@ -11,48 +11,58 @@ body {
   /* background-color: brown; */
 }
 
-#item_list {
+#div_ul_item_list {
   /* text-align: left; */
   background-color: cornsilk;
   border-color: black;
   border-style: solid;
-}
-#ul_item_list {
-  background-color: lightpink;
+  min-height: 130px;
+  min-width: 150px;
 }
 
 #cart {
-  background-color: darkkhaki;
+  /* background-color: rgb(189, 107, 107); */
   margin-left: 50px;
-  border-color: black;
-  border-style: solid;
+
+  /* border-color: black;
+  border-style: solid; */
 }
 
-#ul_cart {
-  background-color: lawngreen;
+#div_ul_cart {
+  background-color: aquamarine;
+  border-color: black;
+  border-style: solid;
+  min-height: 100px;
+  min-width: 180px;
 }
 
 #total {
   /* display: block; */
-  background-color: darkturquoise;
-  width: 50px;
+
   /* position: absolute;
   left: 50px; */
   margin-left: 50px;
-  border-color: black;
-  border-style: solid;
-}
-#total_lb {
-  /* background-color: fuchsia; */
-  /* height: 20px; */
-  /* display: block; */
 }
 
-#total_spm {
+#div_total_spm {
+  /* background-color: fuchsia; */
+  min-width: 100px;
+  border-color: black;
+  border-style: solid;
   background-color: hotpink;
   display: block;
   position: absolute;
   margin-top: 15px;
+}
+
+#total_spm {
+  /* width: 50px;
+  border-color: black;
+  border-style: solid;
+  background-color: hotpink;
+  display: block;
+  position: absolute;
+  margin-top: 15px; */
 }
 
 #button_add {

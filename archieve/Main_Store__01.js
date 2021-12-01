@@ -1,4 +1,4 @@
-alert("Welcoe to store");
+// alert("Welcoe to store");
 
 // **********
 // SB E01:
