@@ -113,8 +113,8 @@ function get_item_index(id, arr) {
 }
 
 function reset_item_cart_press_counter() {
-  item_remove_counter.item_id = "";
-  item_remove_counter.press_counter = 0;
+  item_pressed_to_remove.item_id = "";
+  item_pressed_to_remove.press_counter = 0;
 }
 function reduce_from_cart(item_id) {
   item_cart[get_item_index(item_id, item_cart)].quantity--;
@@ -142,11 +142,10 @@ function reduce_from_cart_if_double_press(ev) {
     eror_log.push([err, "press eror"]);
     return false;
   }
-
-  // if (item_pressed_id != undefined) {
-  if (item_remove_counter.item_id != item_pressed_id) {
-    item_remove_counter.item_id = item_pressed_id;
-    item_remove_counter.press_counter = 1;
+  // removes only if prees 2 times in a row at the same item
+  if (item_pressed_to_remove.item_id != item_pressed_id) {
+    item_pressed_to_remove.item_id = item_pressed_id;
+    item_pressed_to_remove.press_counter = 1;
   } else {
     reset_item_cart_press_counter();
     reduce_from_cart(item_pressed_id);
