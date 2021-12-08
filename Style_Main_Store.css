@@ -66,6 +66,14 @@ body {
 }
 
 #button_add {
+  margin-left: 50px;
+  margin-top: 5px;
   border-radius: 50%;
   /* font-style: unset; */
+}
+
+#button_reset_to_defult {
+  margin-left: 20px;
+  margin-top: 5px;
+  border-radius: 30%;
 }
